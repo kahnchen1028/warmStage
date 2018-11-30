@@ -1,0 +1,8 @@
+<mat-sidenav-container>
+  <mat-sidenav #sidenav mode="side" [(opened)]="opened">Start</mat-sidenav>
+  <mat-sidenav-content>
+    <p>
+      <button mat-mini-fab (click)="toggleSidebar()">{{arrow}}</button>
+    </p>
+  </mat-sidenav-content>
+</mat-sidenav-container>
