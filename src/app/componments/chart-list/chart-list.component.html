@@ -1,3 +1,8 @@
-<p>
-  chart-list works!
-</p>
+<a
+  class="chart-list"
+  *ngFor="let chart of (chartList | keyvalue)"
+  [routerLink]="['/', 'history', chart.value.name]"
+  routerLinkActive="active"
+  mat-list-item
+  >{{ chart.value.dataType + ':' + chart.value.name }}</a
+>

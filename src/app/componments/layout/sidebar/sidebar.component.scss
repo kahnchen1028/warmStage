@@ -1,3 +1,5 @@
+@import '~@angular/material/theming';
+
 .toogle-button {
   position: absolute;
   left: -20px;
@@ -14,5 +16,10 @@
     min-width: 200px;
     margin: 0;
     padding: 0;
+    a.active {
+      background-color: #303f9f;
+      color: white;
+      font-weight: bolder;
+    }
   }
 }

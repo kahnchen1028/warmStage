@@ -2,10 +2,18 @@
   <mat-sidenav #sidenav mode="side" [(opened)]="opened" class="app-sidenav">
     <mat-nav-list class="sidebar">
       <h3 matSubheader>Category</h3>
-      <a [routerLink]="['/', 'building']" mat-list-item>大樓</a>
-      <a [routerLink]="['/', 'company']" mat-list-item>公司</a>
+      <a
+        [routerLink]="['/', 'building']"
+        mat-list-item
+        routerLinkActive="active"
+        >大樓</a
+      >
+      <a [routerLink]="['/', 'company']" mat-list-item routerLinkActive="active"
+        >公司</a
+      >
       <mat-divider></mat-divider>
       <h3 matSubheader>Chart List</h3>
+      <app-chart-list></app-chart-list>
     </mat-nav-list>
   </mat-sidenav>
 

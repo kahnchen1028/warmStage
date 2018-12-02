@@ -4,11 +4,12 @@ import { MainComponent } from './componments/layout/main/main.component';
 import { BuildingComponent } from './componments/building/building.component';
 import { CompanyComponent } from './componments/company/company.component';
 import { ChartListComponent } from './componments/chart-list/chart-list.component';
+import { HistoryComponent } from './componments/history/history.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: MainComponent,
+    component: BuildingComponent,
   },
   {
     path: 'building',
@@ -19,8 +20,8 @@ const routes: Routes = [
     component: CompanyComponent,
   },
   {
-    path: 'chartlist',
-    component: ChartListComponent,
+    path: 'history/:id',
+    component: HistoryComponent,
   },
 ];
 

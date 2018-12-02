@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { AccordionModule } from 'primeng/accordion';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -13,7 +13,9 @@ import { LayoutComponent } from './componments/layout/layout/layout.component';
 import { BuildingComponent } from './componments/building/building.component';
 import { CompanyComponent } from './componments/company/company.component';
 import { ChartListComponent } from './componments/chart-list/chart-list.component';
-
+import { ChartModule } from 'primeng/chart';
+import { ChartToolBarComponent } from './componments/shared/chart-tool-bar/chart-tool-bar.component';
+import { HistoryComponent } from './componments/history/history.component';
 
 @NgModule({
   declarations: [
@@ -25,15 +27,19 @@ import { ChartListComponent } from './componments/chart-list/chart-list.componen
     LayoutComponent,
     BuildingComponent,
     CompanyComponent,
-    ChartListComponent
+    ChartListComponent,
+    ChartToolBarComponent,
+    HistoryComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    AccordionModule,
+    MaterialModule,
+    ChartModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,0 +1,8 @@
+<h3 *ngIf="!hasData">No Data avaivale</h3>
+<p-chart
+  *ngIf="hasData"
+  type="bar"
+  [data]="chartData"
+  width="100%"
+  height="80vh"
+></p-chart>
