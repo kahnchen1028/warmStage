@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-main',
-  templateUrl: './main.component.html',
-  styleUrls: ['./main.component.scss']
+  selector: 'app-layout',
+  templateUrl: './layout.component.html',
+  styleUrls: ['./layout.component.scss']
 })
-export class MainComponent implements OnInit {
+export class LayoutComponent implements OnInit {
   opened: boolean;
   arrow = '>';
   constructor() { }
@@ -13,8 +13,8 @@ export class MainComponent implements OnInit {
   ngOnInit() {
   }
 
-  toggleSidebar() {
-    this.opened = !this.opened;
+  onToggleSidebar(opened) {
+    this.opened = opened;
     if (this.opened) {
       this.arrow = '<';
     } else {

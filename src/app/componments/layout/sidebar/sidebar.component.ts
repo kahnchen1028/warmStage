@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',
@@ -6,20 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent implements OnInit {
+  @Input()
   opened: boolean;
-  arrow = '>';
-  constructor() { }
-
   ngOnInit() {
-  }
 
-  toggleSidebar() {
-    this.opened = !this.opened;
-    if (this.opened) {
-      this.arrow = '<';
-    } else {
-      this.arrow = '>';
-    }
   }
 
 }

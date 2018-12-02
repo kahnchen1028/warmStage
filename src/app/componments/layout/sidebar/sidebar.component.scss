@@ -1,9 +1,18 @@
-.example-container {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: #eee;
+.toogle-button {
+  position: absolute;
+  left: -20px;
+  z-index: 2;
+}
+
+.app-container,
+.app-sidenav {
+  padding-top: 64px;
+  height: calc(100vh - 64px);
+
+  .sidebar {
+    width: 100%;
+    min-width: 200px;
+    margin: 0;
+    padding: 0;
   }
-  
+}

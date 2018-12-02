@@ -1,8 +1,13 @@
-<mat-sidenav-container>
-  <mat-sidenav #sidenav mode="side" [(opened)]="opened">Start</mat-sidenav>
-  <mat-sidenav-content>
-    <p>
-      <button mat-mini-fab (click)="toggleSidebar()">{{arrow}}</button>
-    </p>
-  </mat-sidenav-content>
+<mat-sidenav-container class="app-container">
+  <mat-sidenav #sidenav mode="side" [(opened)]="opened" class="app-sidenav">
+    <mat-nav-list class="sidebar">
+      <h3 matSubheader>Category</h3>
+      <a [routerLink]="['/', 'building']" mat-list-item>大樓</a>
+      <a [routerLink]="['/', 'company']" mat-list-item>公司</a>
+      <mat-divider></mat-divider>
+      <h3 matSubheader>Chart List</h3>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content> <app-main></app-main> </mat-sidenav-content>
 </mat-sidenav-container>

@@ -9,6 +9,11 @@ import { FooterComponent } from './componments/layout/footer/footer.component';
 import { MainComponent } from './componments/layout/main/main.component';
 import { SidebarComponent } from './componments/layout/sidebar/sidebar.component';
 import { MaterialModule } from './module/material.module';
+import { LayoutComponent } from './componments/layout/layout/layout.component';
+import { BuildingComponent } from './componments/building/building.component';
+import { CompanyComponent } from './componments/company/company.component';
+import { ChartListComponent } from './componments/chart-list/chart-list.component';
+
 
 @NgModule({
   declarations: [
@@ -16,7 +21,11 @@ import { MaterialModule } from './module/material.module';
     HeaderComponent,
     FooterComponent,
     MainComponent,
-    SidebarComponent
+    SidebarComponent,
+    LayoutComponent,
+    BuildingComponent,
+    CompanyComponent,
+    ChartListComponent
   ],
   imports: [
     BrowserModule,
