@@ -6,10 +6,17 @@
         [routerLink]="['/', 'building']"
         mat-list-item
         routerLinkActive="active"
-        >大樓</a
       >
-      <a [routerLink]="['/', 'company']" mat-list-item routerLinkActive="active"
-        >公司</a
+        <fa-icon [icon]="faIcon.faBuilding" class="icon"></fa-icon>
+        大樓</a
+      >
+      <a
+        [routerLink]="['/', 'company']"
+        mat-list-item
+        routerLinkActive="active"
+      >
+        <fa-icon [icon]="faIcon.faSuitcase" class="icon"></fa-icon>
+        公司</a
       >
       <mat-divider></mat-divider>
       <h3 matSubheader>Chart List</h3>

@@ -16,6 +16,7 @@ import { ChartListComponent } from './componments/chart-list/chart-list.componen
 import { ChartModule } from 'primeng/chart';
 import { ChartToolBarComponent } from './componments/shared/chart-tool-bar/chart-tool-bar.component';
 import { HistoryComponent } from './componments/history/history.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { HistoryComponent } from './componments/history/history.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     AccordionModule,
+    FontAwesomeModule,
     MaterialModule,
     ChartModule,
   ],
