@@ -9,9 +9,14 @@ import * as moment from 'moment';
 export class ChartStorageService {
   private chartStorage = new Map<String, ChartModel>();
   private dataStorageSubject = new Subject<Map<String, ChartModel>>();
+  private chartSubject = new Subject<ChartModel>();
 
   constructor() {}
-  getRandomChartData() {
+  getRandomChartSubjection() {
+    return this.chartSubject.asObservable();
+  }
+  reloadChartData() {
+    // this method can be replaced with that HttpClient to get data from API.
     const labels = [];
     const data = [];
     for (let i = 0; i > -7; i--) {
@@ -22,12 +27,13 @@ export class ChartStorageService {
       );
       data.push(Math.floor(Math.random() * 400 + 100));
     }
-    console.log(chartType.UNKNOW);
-    return new ChartModel(
-      chartType.UNKNOW,
-      moment().format('YYYYMMDDHHmmss'),
-      labels.reverse(),
-      data.reverse()
+    this.chartSubject.next(
+      new ChartModel(
+        chartType.UNKNOW,
+        moment().format('YYYYMMDDHHmmss'),
+        labels.reverse(),
+        data.reverse()
+      )
     );
   }
 
