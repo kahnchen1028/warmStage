@@ -2,9 +2,16 @@
   position: fixed;
   top: 0;
   z-index: 2;
+  display:flex;
   .logo {
     border: 2px solid white;
     border-radius: 50%;
     padding: 5px 15px;
   }
+  .icon{
+    &.bell{
+      margin:0;
+    }
+  }
+
 }

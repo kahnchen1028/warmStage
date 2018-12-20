@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { faAngular } from '@fortawesome/free-brands-svg-icons';
+import { faBell } from '@fortawesome/free-regular-svg-icons';
 
 @Component({
   selector: 'app-header',
@@ -8,6 +9,7 @@ import { faAngular } from '@fortawesome/free-brands-svg-icons';
 })
 export class HeaderComponent implements OnInit {
   logo = faAngular;
+  bell = faBell;
   @Input()
   arrow: string;
 
@@ -17,9 +19,9 @@ export class HeaderComponent implements OnInit {
   @Output()
   toggleSidebar: EventEmitter<boolean> = new EventEmitter<boolean>();
 
-  constructor() {}
+  constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   toggle() {
     this.opened = !this.opened;
