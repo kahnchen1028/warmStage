@@ -11,16 +11,14 @@ import { Subscription } from 'rxjs';
 export class BuildingComponent implements OnInit, OnDestroy {
   chartData: any;
   chartSubjection: Subscription;
-  constructor(private chartStorage: ChartStorageService) {}
+  constructor(private chartStorage: ChartStorageService) { }
   ngOnInit() {
     this.chartSubjection = this.chartStorage
       .getRandomChartSubjection()
       .subscribe(currenChartData => {
         currenChartData.type = chartType.BUILDING;
         this.chartData = {
-          dataType: currenChartData.type,
-          name: currenChartData.name,
-          labels: currenChartData.labels,
+          ...currenChartData,
           datasets: [
             {
               label: '訪客登入人次',

@@ -1,28 +1,19 @@
 <mat-sidenav-container class="app-container">
   <mat-sidenav #sidenav mode="side" [(opened)]="opened" class="app-sidenav">
     <mat-nav-list class="sidebar">
-      <h3 matSubheader>Category</h3>
-      <a
-        [routerLink]="['/', 'building']"
-        mat-list-item
-        routerLinkActive="active"
-      >
-        <fa-icon [icon]="faIcon.faBuilding" class="icon"></fa-icon>
-        大樓</a
-      >
-      <a
-        [routerLink]="['/', 'company']"
-        mat-list-item
-        routerLinkActive="active"
-      >
-        <fa-icon [icon]="faIcon.faSuitcase" class="icon"></fa-icon>
-        公司</a
-      >
-      <mat-divider></mat-divider>
-      <h3 matSubheader>Chart List</h3>
-      <app-chart-list></app-chart-list>
+      <div *ngFor="let sidebarItem of sidebarList | keyvalue">
+        <h3 matSubheader>{{sidebarItem.value.title}}</h3>
+        <a *ngFor="let item of sidebarItem.value.itemList" [routerLink]="item.path" mat-list-item routerLinkActive="active">
+          <fa-icon [icon]="item.icon" class="icon"></fa-icon>
+          {{item.name}}
+        </a>
+        <mat-divider></mat-divider>
+      </div>
+
     </mat-nav-list>
   </mat-sidenav>
 
-  <mat-sidenav-content> <app-main></app-main> </mat-sidenav-content>
+  <mat-sidenav-content>
+    <app-main></app-main>
+  </mat-sidenav-content>
 </mat-sidenav-container>

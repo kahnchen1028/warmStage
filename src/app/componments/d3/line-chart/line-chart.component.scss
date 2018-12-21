@@ -1,0 +1,11 @@
+.chart {
+    border:1px solid black;
+    height: calc( 85vh - 20px);
+    position: relative;
+    svg {
+        border:1px solid red;
+        width: 100%;
+        height: 100%;
+    }
+}
+    
