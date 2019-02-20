@@ -13,17 +13,15 @@ export class CompanyComponent implements OnInit, OnDestroy {
   currenChartData: ChartModel;
   chartSubjection: Subscription;
 
-  constructor(private chartStorage: ChartStorageService) {}
+  constructor(private chartStorage: ChartStorageService) { }
 
   ngOnInit() {
     this.chartSubjection = this.chartStorage
       .getRandomChartSubjection()
       .subscribe(currenChartData => {
-        currenChartData.type = chartType.BUILDING;
+        currenChartData.type = chartType.COMPANY;
         this.chartData = {
-          dataType: currenChartData.type,
-          name: currenChartData.name,
-          labels: currenChartData.labels,
+          ...currenChartData,
           datasets: [
             {
               label: '訪客登入人次',

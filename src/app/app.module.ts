@@ -12,11 +12,11 @@ import { MaterialModule } from './module/material.module';
 import { LayoutComponent } from './componments/layout/layout/layout.component';
 import { BuildingComponent } from './componments/building/building.component';
 import { CompanyComponent } from './componments/company/company.component';
-import { ChartListComponent } from './componments/chart-list/chart-list.component';
 import { ChartModule } from 'primeng/chart';
 import { ChartToolBarComponent } from './componments/shared/chart-tool-bar/chart-tool-bar.component';
 import { HistoryComponent } from './componments/history/history.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { LineChartComponent } from './componments/d3/line-chart/line-chart.component';
 
 @NgModule({
   declarations: [
@@ -28,9 +28,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     LayoutComponent,
     BuildingComponent,
     CompanyComponent,
-    ChartListComponent,
     ChartToolBarComponent,
     HistoryComponent,
+    LineChartComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,4 +44,4 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

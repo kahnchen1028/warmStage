@@ -13,9 +13,10 @@ export class ChartToolBarComponent implements OnInit {
 
   @Input()
   data: ChartModel;
-  constructor(private chartStorage: ChartStorageService) {}
 
-  ngOnInit() {}
+  constructor(private chartStorage: ChartStorageService) { }
+
+  ngOnInit() { }
   saveChart() {
     console.log(this.data);
     this.chartStorage.saveChartToStorage(this.data);

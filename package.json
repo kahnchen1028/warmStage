@@ -29,7 +29,12 @@
     "@fortawesome/free-regular-svg-icons": "^5.6.3",
     "@fortawesome/free-solid-svg-icons": "^5.6.3",
     "chart.js": "^2.7.3",
+<<<<<<< HEAD
     "core-js": "^2.6.1",
+=======
+    "core-js": "^2.5.4",
+    "d3": "^5.7.0",
+>>>>>>> 0d35a676c3807bd9f49c08a64da6484378fefb06
     "hammerjs": "^2.0.8",
     "primeicons": "^1.0.0",
     "primeng": "^7.0.3",

@@ -14,14 +14,14 @@ export class FooterComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
 
-    this.subject = webSocket({ url: 'ws://localhost:3000', protocol: 'echo-protocol' });
-    this.subject.subscribe(
-      (msg) => this.message = msg.message,
-      (err) => { console.log(err) },
-      () => console.log('complete'))
+    // this.subject = webSocket({ url: 'ws://localhost:3000', protocol: 'echo-protocol' });
+    // this.subject.subscribe(
+    //   (msg) => this.message = msg.message,
+    //   (err) => { console.log(err) },
+    //   () => console.log('complete'))
   }
   send() {
-    this.subject.next({ message: 'some message from client test' });
+    // this.subject.next({ message: 'some message from client test' });
   }
 
   ngOnDestroy(): void {
