@@ -90,6 +90,15 @@ export class LineChartComponent implements OnInit {
     // let line = d3.line().x((d, i) => i + 1).y((d) => d)
     const circle = svgelement.selectAll('circle').data(dataset);
 
+    const mouseG = svgelement.append('g').attr('class', 'mouse-over-effects');
+
+    mouseG
+      .append('path') // this is the black vertical line to follow mouse
+      .attr('class', 'mouse-line')
+      .style('stroke', 'black')
+      .style('stroke-width', '1px')
+      .style('opacity', '0');
+
     circle
       .enter()
       .append('circle')
@@ -101,19 +110,24 @@ export class LineChartComponent implements OnInit {
         return yscale(d.y) + margin.top;
       })
       .attr('r', 10)
-      .attr('fill', 'steelblue');
-    // .on('mouseover', function (a, b, c) {
-    //   console.log(b);
-    //   // this.attr('class', 'focus')
-    // });
+      .style('stroke', 'steelblue')
+      .style('fill', 'white')
+      .style('stroke-width', '2px')
 
-    circle
-      .enter()
-      .append('circle')
-      .attr('cx', (d, i) => xscale(d.x) + margin.left)
-      .attr('cy', (d, i) => yscale(d.y) + margin.top)
-      .attr('r', 5)
-      .attr('fill', 'white');
+      .on('mouseover', function(a, b, c) {
+        console.log(a);
+        console.log(b);
+        console.log(c);
+        d3.select('.mouse-line').style('opacity', '1');
+        d3.select(this).attr('r', 15);
+      })
+      .on('mouseout', function(a, b, c) {
+        console.log(a);
+        console.log(b);
+        console.log(c);
+        d3.select('.mouse-line').style('opacity', '0');
+        d3.select(this).attr('r', 10);
+      });
 
     const lineData = dataset.map((v, idx) => {
       return { x: idx, y: v };
