@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ChartModel, chartType } from 'src/app/models/chart.model';
-import { ChartStorageService } from '../../services/chart-storage.service';
+import { ChartStorageService } from '../../../services/chart-storage.service';
 import { Subscription } from 'rxjs';
 
 @Component({

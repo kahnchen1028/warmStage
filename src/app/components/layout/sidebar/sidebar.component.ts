@@ -27,13 +27,20 @@ export class SidebarComponent implements OnInit {
           { name: "LineChart", icon: faBuilding, path: ['/', 'd3', 'lineChart'] },
         ]
       }],
+      ['tradeview',
+      {
+        title: "Tradeview",
+        itemList: [
+          { name: "Tradeview", icon: faBuilding, path: ['/', 'tradeview'] },
+        ]
+      }],
     ['chartList', {
       title: "Chart List",
       itemList: [
 
       ]
-    }]
-
+    }],
+    
   ])
 
 
