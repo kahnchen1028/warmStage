@@ -12,12 +12,13 @@ declare const TradingView: any;
   styleUrls: ['./tradeview.component.scss']
 })
 export class TradeviewComponent implements OnInit, AfterViewInit {
+  symbolPair: any;
   constructor() {}
 
   ngOnInit() {}
 
   ngAfterViewInit() {
-    new TradingView.widget({
+    const tv = new TradingView.widget({
       container_id: 'technical-analysis',
       autosize: true,
       symbol: this.symbolPair,
