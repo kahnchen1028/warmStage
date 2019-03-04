@@ -1,11 +1,18 @@
 <mat-toolbar color="primary" class="app-header">
-  <button mat-icon-button (click)="toggle()">
+  <!-- <button mat-icon-button (click)="toggle()">
     <mat-icon>{{ opened ? 'close' : 'menu' }}</mat-icon>
-  </button>
+  </button> -->
   <fa-icon [icon]="logo" size="lg" class="icon"></fa-icon>
   <div style="flex:1">Building Guard Dashboard</div>
+  <div>
+    <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>Item 1</button>
+      <button mat-menu-item>Item 2</button>
+    </mat-menu>
+  </div>
   <div matBadge="11" matBadgeColor="warn">
     <fa-icon [icon]="bell" size="lg" class="icon bell"></fa-icon>
-
   </div>
+
 </mat-toolbar>
